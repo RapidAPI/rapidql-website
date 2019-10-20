@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RapidQL</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:900,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+	<link href="/css/code-theme.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/main.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+	<div class="bg-header">
+		<div id="particle-canvas"></div>
+		<header>
+			<figure id="logo"><img src="/images/rapidQLogo-white2x.png" alt="RapidQL Logo"></figure>
+			<h1>One query, many sources.</h1>
+			<p>Join, combine, and aggregate data from multiple APIs and databases &mdash; all in one call. </p>
+			<p class="buttons getstarted">
+				<a href="#">Get Started</a>
+			</p>
+			<p class="snippet npm">
+				<span>npm install rapidql</span>
+			</p>
+		</header>
+	</div>
+	<section>
+		<h2>RapidQL eliminates multiple round-trips when your app needs to fetch data from multiple sources.</h2>
+		<p>Reduce glue code and improve performance by writing just one query to fetch and transform data into a format your app can work with.</p>
+		<div class="snippets">
+
+			<div class="cols">
+				<div class="col col1of3">
+
+<pre><code class="language-javascript">RapidAPI.YelpAPI.getBusinesses(accessToken:access_token, location: "san francisco") {
+  businesses {
+    name,
+    display_phone
+  }
+}</code></pre>
+
+				</div>
+				<div class="col col2of3">
+
+<pre><code class="language-javascript">RapidAPI.YelpAPI.getBusinesses(accessToken:access_token, location: "san francisco") {
+  businesses {
+    name,
+    display_phone
+  }
+}</code></pre>
+
+				</div>
+				<div class="col col3of3">
+
+<pre><code class="language-javascript">RapidAPI.YelpAPI.getBusinesses(accessToken:access_token, location: "san francisco") {
+  businesses {
+    name,
+    display_phone
+  }
+}</code></pre>
+
+				</div>
+			</div>
+
+		</div>
+		<p class="buttons getstarted">
+			<a href="#">Get Started</a>
+		</p>
+	</section>
+	<section>
+		<div class="venn">
+			<div class="api"><span>{</span><span class="ellipsis">&#8230;</span><span>}</span></div>
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>
+		</div>
+		<div class="copy">
+			<h2>Perform JOINS right in the API call </h2>
+			<p>Use the data returned from one data source as input into the query for another.</p>
+		</div>
+	</section>
+	<section id="query-apis">
+		<div class="database">
+			<table>
+				<tr>
+					<th><div></div></th>
+					<th><div></div></th>
+					<th><div></div></th>
+					<th><div></div></th>
+				</tr>
+				<tr>
+					<td><div></div></td>
+					<td><div></div></td>
+					<td><div></div></td>
+					<td><div></div></td>
+				</tr>
+				<tr>
+					<td><div></div></td>
+					<td><div></div></td>
+					<td><div></div></td>
+					<td><div></div></td>
+				</tr>
+				<tr>
+					<td><div></div></td>
+					<td><div></div></td>
+					<td><div></div></td>
+					<td><div></div></td>
+				</tr>
+				<tr>
+					<td><div></div></td>
+					<td><div></div></td>
+					<td><div></div></td>
+					<td><div></div></td>
+				</tr>
+				<tr>
+					<td><div></div></td>
+					<td><div></div></td>
+					<td><div></div></td>
+					<td><div></div></td>
+				</tr>
+			</table>
+		</div>
+		<div class="copy">
+			<h2>Query APIs and databases</h2>
+			<p>Use RapidQL to simultaneously make requests to APIs hosted on RapidAPI as well as databases, defining only the fields you need returned from each.</p>
+			<div class="tip">
+				<p>Tip:  You can also use the HTTP directives to make requests to APIs not currently on RapidAPI.</p>
+			</div>
+			<p>Queries made to databases like MySQL, PostgreSQL, and MongoDB can take advantage of aggregations like count and average. These results can be fed into the next query in the RapidQL statement.</p>
+		</div>
+		<aside>
+			<ul class="aside-buttons">
+				<li><a class="one docs" href="#">View the docs</a></li>
+				<li><a class="two lib" href="#">Download the Library</a></li>
+				<li>
+<pre><code class="language-css">npm install rapidql</code></pre>
+				</li>
+			</ul>
+		</aside>
+	</section>
+	<section>
+		<h2>Central to our vision</h2>
+		<p>RapidQL is open source and free to use, but it’s also built right into the RapidAPI explorer. Learning RapidQL makes it easier to interact with the 10,000+ APIs hosted on RapidAPI.</p>
+		<figure>
+			<div class="frame">
+				<div class="gui">
+					<div class="btn1"></div>
+					<div class="btn2"></div>
+					<div class="btn3"></div>
+				</div>
+				<img src="/images/example.png" alt="Example">
+			</div>
+		</figure>
+	</section>
+	<section>
+		<figure class="share">
+			<img src="/images/contribute.svg" width="757" height="917" alt="Share">
+		</figure>
+		<h2>Contributions welcome</h2>
+		<p>RapidQL is open source, and we welcome all contributions to the codebase. You’re invited to support the core system (see open issues in GitHub), as well as develop integrations with more data sources and database systems (see planned integration in project board in GitHub).</p>
+	</section>
+	<footer>
+		<ul>
+			<li><a href="https://docs.rapidql.com/" target="_blank">Docs</a></li>
+			<li><a href="#">Gallery</a></li>
+			<li><a href="https://github.com/iddogino/rapidql" target="_blank">Github</a></li>
+			<li><a href="#">Integrations</a></li>
+		</ul>
+		<div class="rightsText">
+			<p>ALL RIGHTS RESERVED, R&nbsp;SOFTWARE&nbsp;INC.&nbsp;2019</p>
+		</div>
+	</footer>
+<script src="/javaScript.js"></script>
+</body>
+</html>
