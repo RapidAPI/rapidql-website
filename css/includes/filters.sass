@@ -1,0 +1,82 @@
+#filters
+	padding: 0 0 1rem 0
+	opacity: 0
+	transition-duration: .3s
+	max-height: 10px
+.advanced #filters
+	opacity: 1
+	max-height: 400px
+.filter-nav
+	display: block
+	font-size: 13px
+	text-transform: uppercase
+	margin: 0
+	padding: 0
+	text-align: right
+	.button-dropdown
+		position: relative
+	li
+		display: inline-block
+		list-style: none
+		margin: 0
+		strong
+			display: inline-block
+			padding-right: 20px
+			color: #999
+		li
+			border: 1px solid #1facc6
+			border-color: lighten(#1facc6, 40) #1facc6
+			border-width: 1px 1px 0 1px
+			&:first-child
+				border-color: #1facc6 #1facc6 lighten(#1facc6, 40) #1facc6
+			&:last-child
+				border-width: 1px 1px 1px 1px
+				border-color: lighten(#1facc6, 40) #1facc6 #1facc6 #1facc6
+
+
+
+		a
+			display: block
+			color: darken(#1facc6, 20)
+			padding: 10px 20px 10px 30px
+			text-decoration: none
+			background: darken(#fafafa, 3) url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Eoff%3C%2Ftitle%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M-2-2h24v24H-2z%22%2F%3E%3Cpath%20d%3D%22M10%200C4.48%200%200%204.48%200%2010s4.48%2010%2010%2010%2010-4.48%2010-10S15.52%200%2010%200zm0%2018c-4.42%200-8-3.58-8-8s3.58-8%208-8%208%203.58%208%208-3.58%208-8%208z%22%20fill%3D%22%23DDD%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E') 10px 14px no-repeat
+			background-size: 13px auto
+			transition-duration: .2s
+
+
+
+
+			span
+				display: inline-block
+				margin-left: 5px
+				font-size: 8px
+				color: darken(#1facc6, 20)
+		.dropdown-menu
+			display: none
+			position: absolute
+			left: 0
+			&.last
+				left: -141px
+			padding: 0
+			margin: 0
+			margin-top: 3px
+			text-align: left
+			text-transform: none
+			z-index: 99
+			box-shadow: 3px 3px 6px 0 rgba(#000, .2)
+			&.active
+				display: block
+			a
+				width: 240px
+				background-color: #fff
+
+
+.filter-nav li a:hover, .filter-nav li a.dropdown-toggle.active, .filter-nav li.active a
+	background-color: lighten($lt_blue, 20)
+.filter-nav li.active a
+	background: lighten($lt_blue, 20) url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Eon%3C%2Ftitle%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M-2-2h24v24H-2z%22%2F%3E%3Cpath%20d%3D%22M10%205c-2.76%200-5%202.24-5%205s2.24%205%205%205%205-2.24%205-5-2.24-5-5-5zm0-5C4.48%200%200%204.48%200%2010s4.48%2010%2010%2010%2010-4.48%2010-10S15.52%200%2010%200zm0%2018c-4.42%200-8-3.58-8-8s3.58-8%208-8%208%203.58%208%208-3.58%208-8%208z%22%20fill%3D%22%23115F6E%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E') 10px 14px no-repeat
+
+	background-size: 13px auto
+.filter-nav li a:hover span, .filter-nav li a.dropdown-toggle.active span
+	color: #fff

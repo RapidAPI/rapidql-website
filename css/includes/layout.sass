@@ -1,0 +1,133 @@
+$header_height: 150px
+header#main-header
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  height: $header_height
+  background: #333333
+  color: #fff
+  .width
+    max-width: 1400px
+    margin: auto
+    position: relative
+  nav
+    max-width: 1400px
+    line-height: $header_height - 80px
+    margin: auto
+  h3
+    margin: 0
+    padding: 0
+    img
+      margin-top: 0
+      max-width: 200px
+      margin-left: 1rem
+
+  .feedback
+    position: absolute
+    top: -2px
+    right: 10px
+    z-index: 0
+    a
+      font-weight: normal
+      font-size: .9rem
+      color: #7ed6e2
+      display: inline-block
+      padding: 3px 6px
+      line-height: 1
+
+  div#search
+    position: absolute
+    top: 55px
+    right: 1rem
+    left: 1rem
+
+#container
+  padding: 230px 0 0 0
+
++breakpoint(800px)
+
+  header#main-header
+    div#search
+      position: absolute
+      top: 55px
+      right: 30px
+      left: auto
+      width: 360px
+
+
+    .feedback
+      top: -30px
+      right: 35px
+      a
+        font-weight: bold
+
+    nav
+      line-height: $header_height - 40px
+      margin: auto
+      padding-left: 20px
+      +breakpoint(1450px)
+        padding-left: 0px
+    h3
+      img
+        margin-top: 32px
+        max-width: 25%
+        margin-left: 2rem
+
+
+  body
+    background-image: url("/images/AM-GSlides-Triangle-Pattern-16x9-Orange.png")
+    background-image: url("/images/AM-GSlides-Triangle-Pattern-16x9-Yellow.png")
+    background-image: url("/images/AM GSlides Triangle Pattern-16x9.png")
+    background-image: url("/images/AM-GSlides-Triangle-Pattern-16x9-Grey.png")
+    background-size: 50% auto
+  #container
+    display: flex
+    align-items: normal
+    justify-content: normal
+    padding: 167px 24px 24px 24px
+    align-items: center
+    justify-content: center
+    flex-grow: 1
+  #modal
+    height: 100%
+    max-width: 1400px
+    max-height: 100%
+    border-radius: 0px 4px 4px 4px
+    overflow: auto
+    display: flex
+    background: #fafafa
+    position: relative
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      box-shadow: 0 0 30px 30px #fafafa
+      width: 70%
+      z-index: 99999
+  #aside
+    background: lighten($lt_blue, 20)
+    overflow: auto
+    color: #fff
+    font-weight: bold
+    z-index: 999999
+    width: 30%
+    overflow: auto
+    background: hsl(212, 10%, 93%)
+    font-size: 13px
+    h2
+      color: #fff
+      margin-bottom: 0
+      background-color: $dk_blue
+      padding: 32px 32px 10px 32px
+  #main
+    width: 70%
+    overflow: auto
+    position: relative
+    z-index: 99999
+  .content
+    padding: 1rem 35px 35px 35px
+    padding-left: calc(35px + env(safe-area-inset-left))
+    padding-right: calc(35px + env(safe-area-inset-right))
