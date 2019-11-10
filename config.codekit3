@@ -541,6 +541,14 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/images/rapidql-thumb.gif": {
+		"ft": 4194304,
+		"iS": 928317,
+		"oA": 0,
+		"oAP": "/images/rapidql-thumb.gif",
+		"oF": 0,
+		"opt": 0
+		},
 	"/images/rapidQLogo-white2x.png": {
 		"ft": 32768,
 		"iS": 8182,
