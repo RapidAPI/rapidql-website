@@ -137,7 +137,11 @@ header {
       margin: 0 0 0 2%; } }
 
 .snippets code {
-  font-size: .8rem; }
+  font-size: .8rem;
+  display: block; }
+  @media (min-width: 1000px) {
+    .snippets code {
+      min-height: 500px; } }
 
 .buttons {
   text-align: center; }

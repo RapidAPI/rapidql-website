@@ -46,32 +46,65 @@
 			<div class="cols">
 				<div class="col col1of3">
 
-<pre><code class="language-javascript">RapidAPI.YelpAPI.getBusinesses(accessToken:access_token, location: "san francisco") {
-  businesses {
-    name,
-    display_phone
+<pre><code class="language-javascript">// get a random joke and send it to a friend with Twilio
+rql.query(`{
+  Http.get(
+    url:"https://joke3.p.rapidapi.com/v1/joke"
+  ){
+    content,
+    Http.post(
+      url: "https://api.twilio.com/.../Messages.json",
+      form: {
+        Body: content,
+        From: from,
+        To: to
+      }
+    ){
+      to,
+      status,
+      uri
+    }
   }
-}</code></pre>
+}`);
+</code></pre>
 
 				</div>
 				<div class="col col2of3">
 
-<pre><code class="language-javascript">RapidAPI.YelpAPI.getBusinesses(accessToken:access_token, location: "san francisco") {
-  businesses {
-    name,
-    display_phone
+<pre><code class="language-javascript">// search for photos from unsplash
+rql.query(`{
+  Http.get(
+    url: "https://api.unsplash.com/search/photos",
+    params: { query: 'query' }
+  ){
+    results {
+      urls {
+        full
+      },
+      description
+    }
   }
-}</code></pre>
+}`, {
+  query: "office"
+});
+</code></pre>
 
 				</div>
 				<div class="col col3of3">
 
-<pre><code class="language-javascript">RapidAPI.YelpAPI.getBusinesses(accessToken:access_token, location: "san francisco") {
-  businesses {
-    name,
-    display_phone
+<pre><code class="language-javascript">// test the validity of an email address with debounce
+rql.query(`{
+  Http.get(
+    url: 'https://debounce-email-validation.p.rapidapi.com/v1/',
+    params: {
+      email: email
+    }
+  ){
+    debounce {
+      result
+    }
   }
-}</code></pre>
+`);</code></pre>
 
 				</div>
 			</div>
